@@ -1,0 +1,46 @@
+<!--
+ 
+Authors: Holland Aucoin and Bryce Schmisseur
+Description: This is the user library page that will display an option for a user to view their playlists or just songs.
+
+ -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>User Library</h:head> 
+<body> 
+	<!-- Set the layout and title -->
+	<ui:composition template="/layouts/commonLayout.xhtml">
+	<ui:define name="title">Music Application: User Library</ui:define>
+	<ui:define name="content">
+		<!-- Welcome message -->
+		<div align="left" style="padding-left:30px">		
+		<br></br>
+		<table width="100%" style="border-spacing:8px">
+			<tr valign="bottom">
+			<br></br>
+				<td style="font-size:24px"><b>User Library</b></td>
+				<td></td>
+				<td width="50%"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr align="left" width="100%"></hr></td>
+			</tr>
+			<tr>
+				<td>
+					<h:form>
+						<h:commandButton style="width: 160px; font-size:16px;" class="button" value="Playlists" action="PlaylistPage.xhtml" /><br/>
+						<h:commandButton style="width: 160px; font-size:16px;" class="button" value="Songs" action="SongPage.xhtml" /><br/>
+					</h:form>
+				</td>
+			</tr>
+		</table>
+		</div>
+	</ui:define>
+	</ui:composition>
+</body> 
+</html>

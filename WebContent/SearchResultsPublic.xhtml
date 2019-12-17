@@ -1,0 +1,73 @@
+<!--
+ 
+Authors: Holland Aucoin and Bryce Schmisseur
+Description: This is the public library page that will display an option for a user to view all songs.
+
+ -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"> 
+
+<h:head>Public Library Song Results</h:head> 
+<body> 
+	<!-- Set the layout and title -->
+	<ui:composition template="/layouts/commonLayout.xhtml">
+	<ui:define name="title">Music Application: Public Library Song Results</ui:define>
+	<ui:define name="content">
+		<!-- Welcome message -->
+		<div style="padding-left:30px">		
+		
+		<!-- Create table -->
+		<table width="100%" style="border-spacing:8px">
+			<tr valign="bottom">
+			<br/><br/>
+				<td style="font-size:24px"><b>Public Library Song Results</b></td>
+				<td align="right">
+
+				</td>
+				
+				<td align="center" width="50%">
+ 			<h:form>
+					<h:inputText value="#{search.input}" style="font-size:16px" size="50" pt:placeholder="Search"/>
+					<h:commandButton class="button" action="#{songController.searchSongs(search, 'Public')}" value="Search" />
+				</h:form>
+				</td>
+	
+	
+				</tr>
+			<tr>
+				<td colspan="2"><hr align="left" width="100%"></hr></td>
+			</tr>
+			
+			<tr>
+			<td>
+				<h:dataTable value="#{songController.service.searchPublicSongs()}" var="currentSong">
+				<h:column>
+						<h:form>
+						<h:commandLink action="#{songController.viewPublicSong(currentSong)}">
+							<div class="button" style="vertical-align: middle; width: 300px">
+								<table>
+									<tr>
+										<td>
+											<img style="padding-right: 10px;" src="photos/#{currentSong.coverPhoto}.jpg" width="100px" height="100px"></img>
+										</td>
+										<td style="width: 100%; text-align: center">#{currentSong.songName}</td>
+									</tr>
+								</table>	
+							</div>
+						</h:commandLink>
+						</h:form>
+				</h:column>
+				</h:dataTable>
+			</td>
+			</tr>
+		</table>
+		</div>
+	</ui:define>
+	</ui:composition>
+</body> 
+</html>

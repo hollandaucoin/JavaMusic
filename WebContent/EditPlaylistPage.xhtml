@@ -1,0 +1,55 @@
+<!--
+ 
+Authors: Holland Aucoin and Bryce Schmisseur
+Description: This is the editting a playlist page that will allow a change the properties of an existing playlist.
+
+ -->
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"> 
+
+<h:head>Edit Playlist</h:head> 
+<body> 
+	<!-- Set the layout and title -->
+	<ui:composition template="/layouts/commonLayout.xhtml">
+	<ui:define name="title">Music Application: Edit Playlist</ui:define>
+	<ui:define name="content">
+		<!-- Welcome message -->
+		<div style="padding-left:30px">		
+		<br></br>
+		<!-- Start form and create table -->
+		<h:form>
+		<table width="100%" style="border-spacing:8px">
+			<tr valign="bottom">
+			<br></br>
+				<td style="font-size:24px"><b>Edit Playlist</b></td>
+				<td align="right">
+					<h:commandButton class="button" value="Save" action="#{playlistController.updatePlaylist(playlist)}"/><br/>
+				</td>
+				<td></td>
+				<td width="50%"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><hr align="left" width="100%"></hr></td>
+			</tr>
+			<tr>
+			<td width="15%"><!-- picture --></td>
+				<td>
+				<br></br>
+						<h:inputTextarea rows="1" cols="35" id="playlistName" value="#{playlist.playlistName}" style="font-size:16px"/> <h:message for="playlistName" /> <br/>
+						<br></br>
+						<h:inputTextarea rows="6" cols="35" id="description" value="#{playlist.description}" style="font-size:16px"></h:inputTextarea> <h:message for="description"/> <br/>
+				</td>
+			</tr>
+		</table>
+		</h:form>
+		</div>
+		
+	</ui:define>
+	</ui:composition>
+</body> 
+</html>

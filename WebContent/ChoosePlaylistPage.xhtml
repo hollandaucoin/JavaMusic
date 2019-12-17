@@ -1,0 +1,63 @@
+<!--
+ 
+Authors: Holland Aucoin and Bryce Schmisseur
+Description: This is the playlist library page that will display all of the users playlists.
+
+ -->
+
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ <html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:ui="http://java.sun.com/jsf/facelets"
+       xmlns:f="http://java.sun.com/jsf/core"
+       xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"> 
+
+
+<h:head>Choose Playlist</h:head> 
+<h:body> 
+	<!-- Set the Layout and Title for this page -->
+	<ui:composition template="/layouts/commonLayout.xhtml">
+	<ui:define name="title">Music Application: Choose Playlist</ui:define>
+	<ui:define name="content">
+	
+			<!-- Welcome message -->
+		<div style="padding-left:30px">		
+		<br></br>
+		<!-- Create table -->
+		<table width="100%" style="border-spacing:8px">
+			<tr valign="bottom">
+			<br/><br/>
+				<td style="font-size:24px"><b>Select the Playlist you would like to add to:</b></td>
+				<td align="right">
+
+				</td>
+				
+				<td align="center" width="50%">
+				</td>
+	
+	
+				</tr>
+			<tr>
+				<td colspan="2"><hr align="left" width="100%"></hr></td>
+			</tr>
+			
+			<tr>
+			<td>
+			
+					<h:dataTable value="#{playlistController.service.viewAllPlaylists()}" var="currentPlaylist">
+					<h:column>
+						<h:form>
+							<h:commandButton class="button" value="#{currentPlaylist.playlistName}" action="#{playlistController.selectPlaylist(currentPlaylist)}"/>
+						</h:form>
+					</h:column>
+					</h:dataTable>
+					
+			</td>
+			</tr>
+		</table>
+		</div>
+		
+	</ui:define>
+	</ui:composition>
+</h:body>
+</html>

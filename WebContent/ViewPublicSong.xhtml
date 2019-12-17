@@ -1,0 +1,65 @@
+<!--
+ 
+Authors: Holland Aucoin and Bryce Schmisseur
+Description: This is the playlist library page that will display a selected playlist.
+
+ -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+
+<h:head>Public Song Page</h:head> 
+ 
+<h:body> 
+	<!-- Set the layout and title -->
+	<ui:composition template="/layouts/commonLayout.xhtml">
+	<ui:define name="title">Music Application: Public Song Page</ui:define>
+	<ui:define name="content">
+		
+		<!-- Welcome message -->
+		<div style="padding-left:30px">		
+		<br></br>
+		<!-- Create table -->
+		<table width="100%" style="border-spacing:8px">
+			<tr valign="bottom">
+			<br></br>
+				<td style="font-size:24px"><b>#{song.songName}</b></td>
+				<td align="right">
+				<h:form>
+					<h:commandButton class="button" value=" + " action="ChoosePlaylistPage.xhtml" /><br/>
+				</h:form>
+				</td>
+				
+			</tr>
+			
+			<tr>
+				<td colspan="2"><hr align="left" width="100%"></hr></td>
+				<td width="50%"></td>
+			</tr>
+			
+			<tr>
+			<td>
+				<table width="100%">
+					<tr>
+						<td rowspan="2" width="150px">
+							<img style="padding-right: 10px;" src="photos/#{song.coverPhoto}.jpg" width="175px" height="175px"></img>
+						</td>
+						<td>
+						Artist: #{song.artist}<br/><br/>
+						Album: #{song.album}
+						</td>
+					</tr>
+				</table>
+			</td>
+			</tr>
+		</table>
+		</div>
+		
+	</ui:define>
+	</ui:composition>
+</h:body> 
+</html>

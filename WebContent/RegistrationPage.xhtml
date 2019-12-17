@@ -1,0 +1,58 @@
+<!--
+ 
+Authors: Holland Aucoin and Bryce Schmisseur
+Description: This page is displayed when the user presses "Register" from the index page, and prompts the user for required information.
+				Information is passed to the controller. If invalid, the controller will redirect back to this page to try again.
+
+ -->
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+	<!-- Set the layout and title -->
+	<ui:composition template="/layouts/indexLayout.xhtml">
+	<ui:define name="title">Music Application: Registration</ui:define>
+	<ui:define name="content">
+		<div align="center">
+		
+	<h:form class="form">
+		<table style="text-align: center" class="index">
+			<tr>
+				<td><h2>Registration Page</h2></td>
+			</tr>
+			<tr>
+				<td>First Name: <h:inputText id="firstName" value="#{user.firstName}" title="" /> <h:message for="firstName" /> <br/></td>
+			</tr>
+			<tr>
+				<td>Last Name: <h:inputText id="lastName" value="#{user.lastName}" title="" /> <h:message for="lastName"/> <br/></td>
+			</tr>
+			<tr>
+				<td>Username: <h:inputText id="username" value="#{user.usercredentials.username}" title="" /> <h:message for="username" /> <br/></td>
+			</tr>
+			<tr>
+				<td>Password: <h:inputSecret id="password" value="#{user.usercredentials.password}" title="" /> <h:message for="password"/> <br/></td>
+			</tr>
+			<tr>
+				<td>Phone Number: <h:inputText id="phoneNumber" value="#{user.phoneNumber}" title="" /> <h:message for="phoneNumber" /> <br/></td>
+			</tr>
+			<tr>
+				<td>Email Address: <h:inputText id="email" value="#{user.email}" title="" /> <h:message for="email"/> <br/> <br/></td>
+			</tr>
+			<tr>
+				<td><h:commandButton class="button" value="Register" action="#{loginRegisterController.registerUser(user)}"/><br/></td>
+			</tr>
+			<tr>
+				<td><p>Already have an account? <a href="LoginPage.xhtml">Sign in</a>.</p></td>
+			</tr>
+		</table>
+	</h:form>
+			
+			<h:message />
+		
+		</div>
+	</ui:define>
+	</ui:composition>
+</html>

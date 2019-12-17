@@ -1,0 +1,51 @@
+<!--
+ 
+Authors: Holland Aucoin and Bryce Schmisseur
+Description: This page is displayed when the user presses "Login" from the index page, and prompts the user for required information.
+				Information is passed to the controller. If invalid, the controller will redirect back to this page to try again.
+
+ -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+      
+      <head>
+      </head>
+      <!-- Set the layout and title -->
+	<ui:composition template="/layouts/indexLayout.xhtml">
+	<ui:define name="title">Music Application: Login</ui:define>
+	<ui:define name="content">
+		<div align="center">
+		
+	<h:form class="form">
+		<table style="text-align: center" class="index">
+			<tr>
+				<td><h2>Login Page</h2></td>
+			</tr>
+			<tr>
+				<td>Username: <h:inputText id="username" value="#{userCredentials.username}" title="" /> <h:message for="username" /> <br/></td>
+			</tr>
+			<tr>
+				<td>Password: <h:inputSecret id="password" value="#{userCredentials.password}" title="" /> <h:message for="password"/> <br/> <br/></td>
+			</tr>
+			<tr>
+				<td><h:commandButton class="button" value="Login" action="#{loginRegisterController.loginUser(userCredentials)}"/><br/></td>
+			</tr>
+			<tr>
+				<td><p>Don't have an account? <a href="RegistrationPage.xhtml">Register</a>.</p></td>
+			</tr>
+		</table>
+	</h:form>
+			
+			<h:message />
+		<!-- Display message for invalid input -->
+		<br></br>
+		#{invalidMessage}
+		
+		</div>
+	</ui:define>
+	</ui:composition>
+</html>

@@ -1,0 +1,158 @@
+<!--
+ 
+Authors: Holland Aucoin and Bryce Schmisseur
+Description: Once a user is logged in or registered, the home page will be displayed with a welcome message.
+
+ -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>Home Page</h:head> 
+<body> 
+	<!-- Set the layout and title -->
+	<ui:composition template="/layouts/commonLayout.xhtml">
+	<ui:define name="title">Music Application</ui:define>
+	<ui:define name="content">
+		<!-- Welcome message -->
+		<div align="center">		
+		<br></br>
+		</div>
+		
+		<div align="left" style="padding-left: 30px; padding-right: 30px">
+			<h2 align="center">Top 24 List</h2>
+			<div style="overflow-x:auto">
+			<table width="100%">
+				<tr>
+					<td>
+					<h:dataTable value="#{songController.service.songListRange(1,4)}" var="currentSong">
+						<h:column>
+							<h:form>
+								<h:commandLink action="#{songController.viewPublicSong(currentSong)}">
+									<div class="button" style="vertical-align: middle; width: 300px">
+										<table>
+											<tr>
+												<td>
+													<img style="padding-right: 10px;" src="photos/#{currentSong.coverPhoto}.jpg" width="100px" height="100px"></img>
+												</td>
+												<td style="width: 100%; text-align: center">#{currentSong.songName}</td>
+											</tr>
+										</table>	
+									</div>
+								</h:commandLink>
+							</h:form>
+						</h:column>
+					</h:dataTable>
+					</td>
+					<td align="left">
+					<h:dataTable value="#{songController.service.songListRange(5,8)}" var="currentSong">
+						<h:column>
+							<h:form>
+								<h:commandLink action="#{songController.viewPublicSong(currentSong)}">
+									<div class="button" style="vertical-align: middle; width: 300px">
+										<table>
+											<tr>
+												<td>
+													<img style="padding-right: 10px;" src="photos/#{currentSong.coverPhoto}.jpg" width="100px" height="100px"></img>
+												</td>
+												<td style="width: 100%; text-align: center">#{currentSong.songName}</td>
+											</tr>
+										</table>	
+									</div>
+								</h:commandLink>
+							</h:form>
+						</h:column>
+					</h:dataTable>
+					</td>
+					<td align="left">
+					<h:dataTable value="#{songController.service.songListRange(9,12)}" var="currentSong">
+						<h:column>
+							<h:form>
+								<h:commandLink action="#{songController.viewPublicSong(currentSong)}">
+									<div class="button" style="vertical-align: middle; width: 300px">
+										<table>
+											<tr>
+												<td>
+													<img style="padding-right: 10px;" src="photos/#{currentSong.coverPhoto}.jpg" width="100px" height="100px"></img>
+												</td>
+												<td style="width: 100%; text-align: center">#{currentSong.songName}</td>
+											</tr>
+										</table>	
+									</div>
+								</h:commandLink>
+							</h:form>
+						</h:column>
+					</h:dataTable>
+					</td>
+					<td align="left">
+					<h:dataTable value="#{songController.service.songListRange(13,16)}" var="currentSong">
+						<h:column>
+							<h:form>
+								<h:commandLink action="#{songController.viewPublicSong(currentSong)}">
+									<div class="button" style="vertical-align: middle; width: 300px">
+										<table>
+											<tr>
+												<td>
+													<img style="padding-right: 10px;" src="photos/#{currentSong.coverPhoto}.jpg" width="100px" height="100px"></img>
+												</td>
+												<td style="width: 100%; text-align: center">#{currentSong.songName}</td>
+											</tr>
+										</table>	
+									</div>
+								</h:commandLink>
+							</h:form>
+						</h:column>
+					</h:dataTable>
+					</td>
+					<td align="left">
+					<h:dataTable value="#{songController.service.songListRange(17,20)}" var="currentSong">
+						<h:column>
+							<h:form>
+								<h:commandLink action="#{songController.viewPublicSong(currentSong)}">
+									<div class="button" style="vertical-align: middle; width: 300px">
+										<table>
+											<tr>
+												<td>
+													<img style="padding-right: 10px;" src="photos/#{currentSong.coverPhoto}.jpg" width="100px" height="100px"></img>
+												</td>
+												<td style="width: 100%; text-align: center">#{currentSong.songName}</td>
+											</tr>
+										</table>	
+									</div>
+								</h:commandLink>
+							</h:form>
+						</h:column>
+					</h:dataTable>
+					</td>
+					<td align="left">
+					<h:dataTable value="#{songController.service.songListRange(21,24)}" var="currentSong">
+						<h:column>
+							<h:form>
+								<h:commandLink action="#{songController.viewPublicSong(currentSong)}">
+									<div class="button" style="vertical-align: middle; width: 300px">
+										<table>
+											<tr>
+												<td>
+													<img style="padding-right: 10px;" src="photos/#{currentSong.coverPhoto}.jpg" width="100px" height="100px"></img>
+												</td>
+												<td style="width: 100%; text-align: center">#{currentSong.songName}</td>
+											</tr>
+										</table>	
+									</div>
+								</h:commandLink>
+							</h:form>
+						</h:column>
+					</h:dataTable>
+					</td>
+				</tr>
+			</table>
+			</div>
+		</div>
+
+	</ui:define>
+	</ui:composition>
+</body> 
+</html>
