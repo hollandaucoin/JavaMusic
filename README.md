@@ -1,6 +1,6 @@
 # Music Website
 
-Using CodeReadyStudio, we created a music web application aiming to replicate the functionality of Spotify, that allows a user to login or register an account. Within their account, the user is able to create their own playlist(s) using add and delete functions, as well as the ability to edit playlist names and descriptions. The application has a public library, containing all of the songs in the database. These songs can be added and removed from specific playlists, and the combination of all of these songs create the user’s song library. The public library, user’s library, and each playlist can all be searched for specific songs. All necessary data for users, playlists, and song information was stored in a database using phpMyAdmin, and we used Java EE to make our application accessible on the localhost web.
+Using CodeReadyStudio, I created a music web application aiming to replicate the functionality of Spotify, that allows a user to login or register an account. Within their account, the user is able to create their own playlist(s) using add and delete functions, as well as the ability to edit playlist names and descriptions. The application has a public library, containing all of the songs in the database. These songs can be added and removed from specific playlists, and the combination of all of these songs create the user’s song library. The public library, user’s library, and each playlist can all be searched for specific songs. All necessary data for users, playlists, and song information was stored in a database using phpMyAdmin, and I used Java EE to make our application accessible on the localhost web.
 
 The objective of this project was to  build a complete enterprise class N-Layer application that met the following requirements:
 
@@ -11,7 +11,7 @@ The objective of this project was to  build a complete enterprise class N-Layer 
 	5. Utilize the MVC design pattern with JavaServer Faces
 	6. Execute data validation on all entry fields
 	7. Use a JSF Data Grid and Facelets
-  8. Connect to a database
+  	8. Connect to a database
 
 
 <h2>Design</h2>
@@ -22,12 +22,12 @@ The planning for this project included using tools such as UML diagrams to deter
 
 <h3>UML Diagram</h3>
 <p align="center">
-	<img src="MusicApplicationPng/UML.png" alt="UML"/>
+	<img src="musicApplicationPng/UML.png" alt="UML"/>
 </p>
 	
 <h3>Sitemap<h3>
 <p align="center">
-	<img src="MusicApplicationPng/Sitemap.png" alt="Sitemap"/>
+	<img src="musicApplicationPng/Sitemap.png" alt="Sitemap"/>
 </p>
 
 <h2>Database</h2>
@@ -36,7 +36,7 @@ In order for this application to function properly, the use of a database was re
 
 <h3>ER Diagram<h3>
 <p align="center">
-	<img src="MusicApplicationPng/ERdiagram.png" alt="ER Diagram"/>
+	<img src="musicApplicationPng/ERdiagram.png" alt="ER Diagram"/>
 </p>
 
 
@@ -46,10 +46,10 @@ The final product for this project was a fully functioning music website. Below 
 
 <h3>Web Pages<h3>
 <p align="center">
-	<img src="MusicApplicationPng/Pages.png" alt="Pages"/>
+	<img src="musicApplicationPng/Pages.png" alt="Pages"/>
 </p>
 
 <h3>Digital Wireframes<h3>
 <p align="center">
-	<img src="MusicApplicationPng/Wireframes.png" alt="Digital Wireframes"/>
+	<img src="musicApplicationPng/Wireframes.png" alt="Digital Wireframes"/>
 </p>
