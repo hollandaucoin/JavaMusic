@@ -22,12 +22,12 @@ The planning for this project included using tools such as UML diagrams to deter
 
 <h3>UML Diagram</h3>
 <p align="center">
-	<img src="musicApplicationPng/UML.png" alt="UML"/>
+	<img src="MusicApplicationPNG/UML.png" alt="UML"/>
 </p>
 	
 <h3>Sitemap<h3>
 <p align="center">
-	<img src="musicApplicationPng/Sitemap.png" alt="Sitemap"/>
+	<img src="MusicApplicationPNG/Sitemap.png" alt="Sitemap"/>
 </p>
 
 <h2>Database</h2>
@@ -36,7 +36,7 @@ In order for this application to function properly, the use of a database was re
 
 <h3>ER Diagram<h3>
 <p align="center">
-	<img src="musicApplicationPng/ERdiagram.png" alt="ER Diagram"/>
+	<img src="MusicApplicationPNG/ERdiagram.png" alt="ER Diagram"/>
 </p>
 
 
@@ -46,10 +46,10 @@ The final product for this project was a fully functioning music website. Below 
 
 <h3>Web Pages<h3>
 <p align="center">
-	<img src="musicApplicationPng/Pages.png" alt="Pages"/>
+	<img src="MusicApplicationPNG/Pages.png" alt="Pages"/>
 </p>
 
 <h3>Digital Wireframes<h3>
 <p align="center">
-	<img src="musicApplicationPng/Wireframes.png" alt="Digital Wireframes"/>
+	<img src="MusicApplicationPNG/Wireframes.png" alt="Digital Wireframes"/>
 </p>
