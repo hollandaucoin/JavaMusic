@@ -32,7 +32,7 @@ The planning for this project included using tools such as UML diagrams to deter
 
 <h2>Database</h2>
 
-In order for this application to function properly, the use of a database was required. Within the database were tables for user's information, user's login credentials, playlists created, all of the songs in the public library, and a relational database that determined which songs were in each playlist. Below is an ER diagram that shows those connections.
+In order for this application to function properly, the use of a database was required. Within the database were tables for user's information, user's login credentials, playlists created, all of the songs in the public library, and a relation table that determined which songs were in each playlist. Below is an ER diagram that shows those connections.
 
 <h3>ER Diagram<h3>
 <p align="center">
