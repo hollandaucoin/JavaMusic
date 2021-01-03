@@ -24,6 +24,11 @@ The planning for this project included using tools such as UML diagrams to deter
 <p align="center">
 	<img src="MusicApplicationPNG/UML.png" alt="UML"/>
 </p>
+
+<h3>Digital Wireframes<h3>
+<p align="center">
+	<img src="MusicApplicationPNG/Wireframes.png" alt="Digital Wireframes"/>
+</p>
 	
 <h3>Sitemap<h3>
 <p align="center">
@@ -47,9 +52,4 @@ The final product for this project was a fully functioning music website. Below 
 <h3>Web Pages<h3>
 <p align="center">
 	<img src="MusicApplicationPNG/Pages.png" alt="Pages"/>
-</p>
-
-<h3>Digital Wireframes<h3>
-<p align="center">
-	<img src="MusicApplicationPNG/Wireframes.png" alt="Digital Wireframes"/>
 </p>
