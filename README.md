@@ -1,3 +1,7 @@
+<p align="center">
+	<img src="MusicApplicationPNG/Logo.png" alt="Logo"/>
+</p>
+
 # Music Website - Fall 2019
 
 Using CodeReadyStudio, I created a Java Enterprise music application aiming to replicate the functionality of Spotify, that allows a user to login or register an account. Within their account, the user is able to create their own playlist(s) using add and delete functions, as well as the ability to edit playlist names and descriptions. The application has a public library, containing all of the songs in the database. These songs can be added and removed from specific playlists, and the combination of all of these songs create the user’s song library. The public library, user’s library, and each playlist can all be searched for specific songs. All necessary data for users, playlists, and song information was stored in a MySQL database, and used the JBoss server to make the application accessible on the localhost web.
